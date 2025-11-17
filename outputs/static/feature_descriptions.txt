@@ -1,0 +1,48 @@
+============================================================
+多层网络特征说明
+============================================================
+
+【单层网络特征】
+每层独立计算，包括:
+- degree_centrality: 度中心性
+- clustering_coef: 聚类系数
+- betweenness: 介数中心性
+- closeness: 接近中心性
+- pagerank: PageRank值
+- weighted_degree: 加权度
+- degree: 度数
+
+【多层网络特征】
+跨层综合特征:
+- cross_layer_activity: 跨层活跃度（在多少层中度>平均值）
+- degree_variance: 层间度差异（最大度-最小度）
+- degree_std: 层间度标准差
+- degree_mean: 层间度均值
+- physical_educational_consistency: 物理层与教育层一致性
+- phys_edu_neighbor_overlap: 物理层与教育层邻居重叠度
+- phys_beh_neighbor_overlap: 物理层与行为层邻居重叠度
+- total_unique_neighbors: 总邻居数（所有层并集）
+
+【行为属性特征】
+从原始数据提取:
+- call_count: 通话次数
+- call_duration: 通话时长（分钟）
+- sms_count: 短信数量
+- app_usage_hours: App使用时长（小时）
+- calendar_events: 日历事件数
+- physical_activity: 物理活动量
+- ema_mood_mean: EMA情绪均值
+- ema_mood_std: EMA情绪标准差
+- ema_stress_mean: EMA压力均值
+- ema_stress_std: EMA压力标准差
+- ema_response_count: EMA响应次数
+
+【同伴影响特征】
+邻居的平均特征:
+- {layer}_neighbor_avg_ema_mood: 邻居平均情绪
+- {layer}_neighbor_avg_ema_stress: 邻居平均压力
+- {layer}_neighbor_count: 邻居数量
+
+
+总特征数: 49
+总节点数: 49

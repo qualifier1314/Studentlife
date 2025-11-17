@@ -1,0 +1,41 @@
+多层网络特征重要性分析报告
+============================================================
+
+
+Mental Health Risk
+------------------------------------------------------------
+
+Top 10 重要特征:
+   1. behavioral_weighted_degree               0.0986
+   2. behavioral_closeness                     0.0927
+   3. behavioral_clustering_coef               0.0574
+   4. behavioral_pagerank                      0.0546
+   5. behavioral_degree_centrality             0.0521
+   6. behavioral_neighbor_count                0.0465
+   7. educational_betweenness                  0.0427
+   8. physical_clustering_coef                 0.0395
+   9. behavioral_degree                        0.0374
+  10. educational_pagerank                     0.0367
+
+特征类别贡献:
+  - 单层网络特征: 0.803 (89.3%)
+  - 多层网络特征: 0.096 (10.7%)
+
+Social Health Risk
+------------------------------------------------------------
+
+Top 10 重要特征:
+   1. cross_layer_activity                     0.2227
+   2. total_unique_neighbors                   0.1775
+   3. degree_mean                              0.1061
+   4. physical_educational_consistency         0.0926
+   5. phys_edu_neighbor_overlap                0.0584
+   6. behavioral_neighbor_count                0.0440
+   7. behavioral_degree_centrality             0.0352
+   8. behavioral_degree                        0.0285
+   9. physical_pagerank                        0.0280
+  10. behavioral_weighted_degree               0.0237
+
+特征类别贡献:
+  - 单层网络特征: 0.415 (47.3%)
+  - 多层网络特征: 0.462 (52.7%)

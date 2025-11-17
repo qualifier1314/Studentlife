@@ -1,0 +1,5 @@
+community,size,internal_edges,internal_weight,avg_internal_edge_weight,avg_age,top_majors,top_years,avg_mood,avg_stress,avg_response_rate,comm_calls_total_mean,comm_call_duration_total_mean,comm_outgoing_ratio_calls_mean,comm_sms_total_mean,comm_outgoing_ratio_sms_mean,comm_comm_freq_day_mean,comm_comm_freq_week_mean,comm_unique_contacts_mean,comm_contact_entropy_mean
+0,21,206,571.174,2.773,,,,,,,1480.762,12285.905,,1877.429,,3358.19,3358.19,2789.095,7.74
+1,12,62,238.379,3.845,,,,,,,1310.0,5657.833,,1282.833,,2592.833,2592.833,2501.75,7.689
+2,11,39,112.917,2.895,,,,,,,1525.273,15978.727,,2391.182,,3916.455,3916.455,2774.364,7.41
+3,5,10,46.338,4.634,,,,,,,1641.4,27861.0,,2292.2,,3933.6,3933.6,3071.8,7.812

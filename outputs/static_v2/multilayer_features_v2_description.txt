@@ -1,0 +1,59 @@
+================================================================================
+多层网络特征集 V2（修复版）
+================================================================================
+
+修复内容：
+1. ✅ 使用交集节点集（28个核心学生），避免'缺失=0'的语义错误
+2. ✅ 层内Z-score标准化，消除层密度差异
+3. ✅ 引入经典多层网络指标（参与系数、层熵等）
+4. ✅ 特征降维：从49个精简到15-19个
+
+样本数: 28
+特征数: 24
+样本/特征比例: 1.17
+
+================================================================================
+特征列表
+================================================================================
+
+【单层拓扑特征】(9个)
+  Physical层:
+    - physical_degree_centrality: 度中心性
+    - physical_betweenness: 介数中心性
+    - physical_clustering_coef: 聚类系数
+
+  Behavioral层:
+    - behavioral_degree_centrality: 度中心性
+    - behavioral_betweenness: 介数中心性
+    - behavioral_clustering_coef: 聚类系数
+
+  Educational层:
+    - educational_degree_centrality: 度中心性
+    - educational_betweenness: 介数中心性
+    - educational_clustering_coef: 聚类系数
+
+【多层网络特征】(5个)
+    - cross_layer_activity_z: 跨层活跃度（Z-score版本）
+    - participation_coefficient: 参与系数（邻居分布均匀度）
+    - overlapping_degree: 重叠度（跨层总度）
+    - phys_edu_neighbor_overlap: 邻居重叠度（Physical-Educational）
+    - layer_entropy: 层熵（邻居分布熵）
+
+【行为属性特征】(3个)
+    - ema_mood_mean: 平均情绪
+    - ema_response_count: EMA响应次数
+    - [TODO] calendar_events, physical_activity
+
+【同伴影响特征】(3个)
+    - peer_avg_mood: 邻居平均情绪
+    - peer_avg_stress: 邻居平均压力
+    - total_neighbors: 总邻居数
+
+================================================================================
+删除的冗余特征（原版49个 → V2版20个）
+================================================================================
+单层特征: degree, closeness, pagerank, weighted_degree（与degree_centrality/betweenness高相关）
+多层特征: degree_variance, degree_std, degree_mean（未标准化版本）
+多层特征: phys_beh_neighbor_overlap, total_unique_neighbors（冗余）
+行为特征: call_count, sms_count, app_usage_hours（数据泄露）
+同伴特征: 每层独立的邻居特征（合并为跨层版本）

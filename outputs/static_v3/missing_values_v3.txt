@@ -1,0 +1,44 @@
+================================================================================
+ 缺失值分析（V3版本）
+================================================================================
+
+总特征数: 27
+有缺失值的特征数: 22
+
+缺失值详情:
+--------------------------------------------------------------------------------
+peer_avg_stress                                   :  49/49 (100.0%)
+peer_avg_mood                                     :  49/49 (100.0%)
+ema_response_count                                :  49/49 (100.0%)
+ema_mood_mean                                     :  49/49 (100.0%)
+physical_degree_centrality_z                      :  18/49 ( 36.7%)
+physical_clustering_coef                          :  18/49 ( 36.7%)
+physical_degree_centrality                        :  18/49 ( 36.7%)
+physical_betweenness                              :  18/49 ( 36.7%)
+educational_clustering_coef                       :   4/49 (  8.2%)
+educational_betweenness                           :   4/49 (  8.2%)
+educational_degree_centrality                     :   4/49 (  8.2%)
+cross_layer_activity                              :   4/49 (  8.2%)
+degree_variance_z                                 :   4/49 (  8.2%)
+avg_zscore                                        :   4/49 (  8.2%)
+participation_coefficient                         :   4/49 (  8.2%)
+overlapping_degree                                :   4/49 (  8.2%)
+layer_entropy                                     :   4/49 (  8.2%)
+educational_degree_centrality_z                   :   4/49 (  8.2%)
+behavioral_degree_centrality_z                    :   3/49 (  6.1%)
+behavioral_betweenness                            :   3/49 (  6.1%)
+behavioral_clustering_coef                        :   3/49 (  6.1%)
+behavioral_degree_centrality                      :   3/49 (  6.1%)
+
+================================================================================
+预期缺失模式:
+================================================================================
+
+1. Physical层特征: ~36.7%缺失（18/49学生）
+2. Behavioral层特征: ~6.1%缺失（3/49学生）
+3. Educational层特征: ~8.2%缺失（4/49学生）
+4. 跨层特征: 少于2层数据时设为NaN
+
+处理建议:
+- 使用XGBoost/LightGBM/CatBoost（原生支持NaN）
+- 或使用Imputation方法（KNN、MICE等）

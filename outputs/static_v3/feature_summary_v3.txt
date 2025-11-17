@@ -1,0 +1,68 @@
+================================================================================
+ 多层网络特征摘要（V3版本 - 49个学生）
+================================================================================
+
+样本数: 49
+特征数: 27
+样本/特征比例: 1.81
+
+================================================================================
+特征分类统计
+================================================================================
+
+单层拓扑特征: 9个
+  - physical_degree_centrality
+  - physical_clustering_coef
+  - physical_betweenness
+  - behavioral_degree_centrality
+  - behavioral_clustering_coef
+  - behavioral_betweenness
+  - educational_degree_centrality
+  - educational_clustering_coef
+  - educational_betweenness
+
+Z-score标准化特征: 5个
+  - physical_degree_centrality_z
+  - behavioral_degree_centrality_z
+  - educational_degree_centrality_z
+  - degree_variance_z
+  - avg_zscore
+
+层覆盖特征: 4个
+  - has_physical_layer
+  - has_behavioral_layer
+  - has_educational_layer
+  - layer_coverage
+
+跨层特征: 3个
+  - cross_layer_activity
+  - degree_variance_z
+  - avg_zscore
+
+经典多层指标: 3个
+  - participation_coefficient
+  - overlapping_degree
+  - layer_entropy
+
+行为属性特征: 2个
+  - ema_mood_mean
+  - ema_response_count
+
+同伴影响特征: 3个
+  - peer_avg_mood
+  - peer_avg_stress
+  - total_neighbors
+
+================================================================================
+特征统计
+================================================================================
+
+       physical_degree_centrality  physical_clustering_coef  physical_betweenness  behavioral_degree_centrality  behavioral_clustering_coef  behavioral_betweenness  educational_degree_centrality  educational_clustering_coef  educational_betweenness  physical_degree_centrality_z  behavioral_degree_centrality_z  educational_degree_centrality_z  has_physical_layer  has_behavioral_layer  has_educational_layer  layer_coverage  cross_layer_activity  degree_variance_z  avg_zscore  participation_coefficient  overlapping_degree  layer_entropy  ema_mood_mean  ema_response_count  peer_avg_mood  peer_avg_stress  total_neighbors
+count                   31.000000                 31.000000             31.000000                     46.000000                   46.000000               46.000000                      45.000000                    45.000000                45.000000                  3.100000e+01                    4.600000e+01                     4.500000e+01           49.000000             49.000000              49.000000       49.000000             45.000000          45.000000   45.000000                  45.000000           45.000000      45.000000            0.0                 0.0            0.0              0.0        49.000000
+mean                     0.836559                  0.930088              1.073870                      0.311111                    0.634298                0.050780                       0.914141                     0.954522                 0.005403                  1.325105e-16                    8.205996e-17                     7.444662e-16            0.632653              0.938776               0.918367        2.489796              1.866667           0.634976    0.017280                   0.505882            1.888889       1.162906            NaN                 NaN            NaN              NaN        40.857143
+std                      0.196705                  0.045461              2.480015                      0.153817                    0.188679                0.091385                       0.191986                     0.208299                 0.014676                  1.016530e+00                    1.011050e+00                     1.011300e+00            0.487078              0.242226               0.276642        0.649437              0.660578           1.235521    0.685502                   0.139466            0.647450       0.341782            NaN                 NaN            NaN              NaN         9.742518
+min                      0.266667                  0.862069              0.000000                      0.022222                    0.000000                0.000000                       0.022727                     0.000000                 0.000000                 -2.945081e+00                   -1.898882e+00                    -4.695577e+00            0.000000              0.000000               0.000000        1.000000              0.000000           0.003307   -2.124006                   0.091531            0.000000       0.278171            NaN                 NaN            NaN              NaN         7.000000
+25%                      0.866667                  0.906695              0.000000                      0.222222                    0.516434                0.001010                       0.954545                     1.000000                 0.002104                  1.555892e-01                   -5.842713e-01                     2.128307e-01            0.000000              1.000000               1.000000        2.000000              2.000000           0.086635   -0.209288                   0.433526            2.000000       0.901851            NaN                 NaN            NaN              NaN        42.000000
+50%                      0.900000                  0.931624              0.018764                      0.277778                    0.635155                0.007071                       0.954545                     1.000000                 0.002617                  3.278486e-01                   -2.191017e-01                     2.128307e-01            1.000000              1.000000               1.000000        3.000000              2.000000           0.155159    0.034159                   0.578774            2.000000       1.365196            NaN                 NaN            NaN              NaN        44.000000
+75%                      0.933333                  0.963248              0.220208                      0.394444                    0.750000                0.057639                       0.954545                     1.000000                 0.003166                  5.001081e-01                    5.477543e-01                     2.128307e-01            1.000000              1.000000               1.000000        3.000000              2.000000           0.530568    0.343755                   0.605069            2.000000       1.428652            NaN                 NaN            NaN              NaN        45.000000
+max                      0.966667                  1.000000              8.614593                      0.800000                    1.000000                0.334848                       0.977273                     1.000000                 0.091910                  6.723675e-01                    3.213492e+00                     3.325480e-01            1.000000              1.000000               1.000000        3.000000              3.000000           6.011590    1.713161                   0.653446            3.000000       1.555270            NaN                 NaN            NaN              NaN        47.000000
